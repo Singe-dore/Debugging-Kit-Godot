@@ -10,7 +10,14 @@ Automated testing and debugging for any Godot project. Verifies code quality wit
 
 ## Quick Start
 
-**To start testing, run one of three modes:**
+**Invoke the interactive menu in Claude Code:**
+```
+/PUT_SKILL_NAME_HERE
+```
+
+I'll show you an interactive menu (arrow-key navigation) to select a mode. Then the test runs automatically.
+
+**Or run a specific mode directly:**
 
 1. **Quick** — Static checks only (~3 seconds)
    - Scans GDScript for common mistakes (@onready patterns, shadowed names, scene references)
@@ -25,17 +32,10 @@ Automated testing and debugging for any Godot project. Verifies code quality wit
    - Runs all checks
    - Analyzes test log for patterns, violations, performance metrics
 
-Ask me to run a specific mode with: "Run mode 1", "Run mode 2", or "Run mode 3".
-
-Or run the interactive menu yourself:
-```bash
-python3 .claude/skills/PUT_SKILL_NAME_HERE/menu.py
-```
-
-Or run specific mode directly:
-```bash
-bash .claude/skills/PUT_SKILL_NAME_HERE/driver.sh
-```
+**Direct commands:**
+- "Run mode 1" / "Run mode 2" / "Run mode 3" — Ask me to run a specific mode
+- `python3 .claude/skills/PUT_SKILL_NAME_HERE/menu.py` — Manual interactive menu
+- `bash .claude/skills/PUT_SKILL_NAME_HERE/driver.sh 1` — Run mode 1 directly (mode = 1, 2, or 3)
 
 ✅ Works in WSL with automatic Windows interop
 ✅ Configurable per-project (no hardcoded game logic)
