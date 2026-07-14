@@ -1,16 +1,15 @@
 {
   "_detected_candidates": {},
-  "_instructions": "GENERIC TEMPLATE. (1) For MOVEMENT games: use 'player_group' (group your player node is in). For OTHER games (clicker, puzzle, card): use 'target_node' (name of game state manager). (2) Read your actual project scripts to find numeric properties. (3) Determine bounds by reading code: clamp() calls, max values, screen size, etc. Do not copy-paste. Understand your game first. See examples/ for game-type-specific templates.",
+  "_instructions": "GENERIC EXAMPLE. Read the project's actual scripts. Fill in: (1) player_group from where player adds itself; (2) input_actions_to_fuzz from InputMap or from what the player script reads; (3) invariants from actual numeric properties in the player (position, velocity, health, ammo, etc.) — guess bounds by reading the code (max health, max ammo, screen size, etc.). Do not copy-paste. Understand the game first.",
   "godot_executable": "/usr/bin/godot",
-  "player_group": "",
-  "target_node": "",
-  "input_actions_to_fuzz": [],
+  "player_group": "REPLACE_WITH_ACTUAL_GROUP_NAME",
+  "input_actions_to_fuzz": ["REPLACE_WITH_ACTUAL_INPUT_ACTIONS"],
   "invariants": [
     {
-      "property": "REPLACE_WITH_ACTUAL_PROPERTY_NAME",
-      "min": 0,
-      "max": 100,
-      "note": "Read your project scripts to find numeric properties and realistic bounds"
+      "property": "position.x",
+      "min": "REPLACE_WITH_MIN_BOUND",
+      "max": "REPLACE_WITH_MAX_BOUND",
+      "note": "Read the player script and determine realistic bounds for this property"
     }
   ],
   "required_autoloads": [],
