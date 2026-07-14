@@ -45,6 +45,10 @@ An automated testing and debugging skill for Godot projects. Basically, I took a
 
 ### Step 2: Install
 
+**⚠️ CRITICAL THING YOU ABSOLUTELY MUST DO FIRST**
+
+Before you do literally anything else, make sure you have the `Debugging-Kit-main` folder extracted and sitting in your Godot project directory. Yes, the actual folder. The one with all the files. Not some weird shortcut or ghost file. If you skip this step, the installer will fail spectacularly and you'll blame me, but really it's your fault. You've been warned. Don't say I didn't tell you.
+
 Choose your method based on your environment:
 
 **Option 1: Windows PowerShell (Easiest for Windows)**
