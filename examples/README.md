@@ -1,26 +1,30 @@
-# Example Configurations
+# Example Configuration
 
-This folder contains completed `debug_config.json` examples for different game types. Use these as reference when filling in your own config.
+This folder contains a **generic template** for `debug_config.json`. Do not copy-paste it — read your project first, then fill in real values based on your actual game.
 
 ## What's Here
 
-- **config_2d_platformer.json** — A 2D platformer game with position bounds, velocity limits, and health tracking
-- **config_rhythm_game.json** — A rhythm/action game with energy system, weapon levels, and beat-based mechanics
-- **config_puzzle_game.json** — A turn-based puzzle game with move counters and score tracking
+- **config_generic_template.json** — A template showing structure. Has placeholder comments that guide you (or Claude) to read the actual project and fill in real values.
 
-## How to Use These
+## How to Use It
 
-1. **Read the file that matches your game type** — It has comments explaining each invariant
-2. **Copy the structure, not the values** — Your game will have different bounds and properties
-3. **Modify for your project:**
-   - Change `godot_executable` to your actual Godot path
-   - Change `player_group` to match your player node's group
-   - Update `input_actions_to_fuzz` to match your actual input actions
-   - Replace invariants with properties from your actual player script
-4. **Test with config validation:**
-   ```bash
-   bash .claude/skills/<your-skill-name>/driver.sh 4
-   ```
+**For AIs installing this:**
+1. Read the player script in the target project (`res://scripts/player.gd` or similar)
+2. Understand what numeric properties exist (position, velocity, health, ammo, level, etc.)
+3. Determine realistic bounds by reading the code (max values, clamp() calls, screen size, etc.)
+4. Fill in the template with real values from step 2-3
+5. Verify: `bash .claude/skills/<skill-name>/driver.sh 4`
+
+**For humans:**
+Open `config_generic_template.json`, read the `_instructions` field. It will tell you exactly what to do.
+
+## Why No Game-Type Examples?
+
+We removed platformer/puzzle/rhythm examples because:
+- Copy-paste kills understanding — you'd blindly use someone else's bounds for a different game
+- Every game is different (different screen sizes, different max values, different properties)
+- The template + _instructions is clearer than 3 confusing examples
+- AIs should read your actual code, not guess from "close enough" examples
 
 ## Key Principles
 
