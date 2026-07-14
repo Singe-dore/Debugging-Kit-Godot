@@ -33,15 +33,16 @@ detect_wsl() {
 	return 1
 }
 
-# Get test mode from argument or prompt
+# Get test mode from argument (Claude Code will pass this after AskUserQuestion)
 if [ -z "$1" ]; then
-	# No argument provided - show interactive menu
+	# Fallback to text menu if called directly (e.g., bash driver.sh)
 	print_header "Debugging Kit Test Suite"
-	echo "Choose test mode:"
-	echo "1. Quick (Static checks only - 3 seconds)"
-	echo "2. Autoplay (Gameplay simulation + state validation - 25 seconds)"
-	echo "3. Full (Static checks + Autoplay + Deep analysis - 35 seconds)"
-	echo "4. Validate config (Check debug_config.json for errors)"
+	echo "📋 Choose test mode:"
+	echo ""
+	echo "  [1] Quick         — Static checks only (~3 seconds)"
+	echo "  [2] Autoplay      — Gameplay simulation + state validation (~20 seconds)"
+	echo "  [3] Full          — All checks + deep analysis (~30 seconds)"
+	echo "  [4] Validate      — Check debug_config.json for errors (~1 second)"
 	echo ""
 	read -p "Enter choice [1-4] (default: 1): " test_mode
 	test_mode=${test_mode:-1}
