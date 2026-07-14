@@ -168,13 +168,6 @@ See `DESIGN.md` for the full philosophy breakdown. TL;DR: this tool survives fea
 ❌ Test UI layout or interaction  
 ❌ Replace manual gameplay testing
 
-## What It Can't Do
-
-❌ Test game-specific mechanics (e.g. "damage on-beat is doubled")  
-❌ Detect animation/visual bugs (it's monitoring numbers, not pixels)  
-❌ Test UI layout or interaction  
-❌ Require you to write custom test code (config only)
-
 These are acceptable limitations for a generic tool.
 
 ## Documentation
