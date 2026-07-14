@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.env.local
+.env.*.local
+
+# OS
+Thumbs.db
+.DS_Store
+*.log
+
+# Build outputs
+dist/
+build/
+*.o
+*.a
+*.so
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+.tmp/
+*.bak
+/android/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Claude Code workflow
+.local/
+
+# Environment & secrets
+.env
+.env.local
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+.fleet/
+.DS_Store
+
+# OS
+Thumbs.db
+*.swp
+*.swo
+Godot_v4.6.2-stable_mono_win64/
