@@ -262,7 +262,7 @@ health out of bounds [0, 100]: value was 125
    }
    ```
 
-One of these is a bug. The other is a configuration mistake. Figure out which before blaming the toolkit
+One of these is a bug. The other is a configuration mistake. Figure out which before blaming the toolkit.
 
 ### Test log not found
 
